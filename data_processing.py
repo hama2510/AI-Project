@@ -63,5 +63,5 @@ def load_data_from_folder(folder_path):
         arr.append([index, data, label, label_n])
         
     df = pd.DataFrame(arr)
-    df.columns = ['id', 'data', 'label', 'label_number']
+    df.columns = ['id', 'acc', 'label', 'label_number']
     return df
