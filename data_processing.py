@@ -59,9 +59,9 @@ def load_data_from_folder(folder_path):
         else:
             label = 'abnormal'
             label_n = 1
-            
-        arr.append([index, data, label, label_n])
+        sr = 48000
+        arr.append([index, data, sr, label, label_n])
         
     df = pd.DataFrame(arr)
-    df.columns = ['id', 'acc', 'label', 'label_number']
+    df.columns = ['id', 'acc', 'sampling_rate', 'label','label_number']
     return df
